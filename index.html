@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthy Food Habits | Eat Smart • Stay Hydrated • Live Better</title>
+  <meta name="description" content="An educational Engineering Community Engagement Project platform focused on educating students about healthy food habits, meal planning, hydration, and nutritious Indian recipes.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+</head>
+<body>
+
+  <!-- ==========================================
+       1. LOGIN / WELCOME OVERLAY MODAL
+       ========================================== -->
+  <div class="auth-overlay" id="auth-overlay">
+    <div class="auth-card">
+      <div class="auth-card-header">
+        <div class="auth-logo">🥗</div>
+        <h1 class="auth-title">Welcome to Healthy Food Habits</h1>
+        <p class="auth-subtitle">Eat Smart • Stay Hydrated • Live Better</p>
+      </div>
+
+      <form class="auth-form" id="auth-form">
+        <div class="form-group">
+          <label for="user-name-input">Full Name</label>
+          <input type="text" id="user-name-input" class="input-field" placeholder="e.g. Durva Sharma" required>
+        </div>
+        <div class="form-group">
+          <label for="user-email-input">Email Address</label>
+          <input type="email" id="user-email-input" class="input-field" placeholder="student@college.edu" required>
+        </div>
+        <div class="form-group">
+          <label for="user-password-input">Password</label>
+          <input type="password" id="user-password-input" class="input-field" placeholder="••••••••" required>
+        </div>
+
+        <div class="form-remember">
+          <label class="checkbox-label">
+            <input type="checkbox" id="remember-me-checkbox" checked>
+            <span>Remember me</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          <span>🚀 Log In & Start Journey</span>
+        </button>
+      </form>
+
+      <div class="auth-divider">
+        <span>OR</span>
+      </div>
+
+      <button type="button" class="btn btn-guest" id="guest-login-btn">
+        <span>👤 Continue as Guest</span>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- ==========================================
+       2. STICKY NAVIGATION BAR
+       ========================================== -->
+  <header class="navbar">
+    <div class="container navbar-container">
+      <a href="#home" class="nav-brand">
+        <span>Healthy Food Habits 🌱</span>
+      </a>
+
+      <nav class="nav-links" id="nav-menu">
+        <a href="#home" class="nav-link active">🏠 Home</a>
+        <a href="#habits" class="nav-link">🌱 Healthy Habits</a>
+        <a href="#water-reminder" class="nav-link">💧 Water Reminder</a>
+        <a href="#meal-planner" class="nav-link">🍱 Meal Planner</a>
+        <a href="#recipes" class="nav-link">🇮🇳 Indian Recipes</a>
+        <a href="#quiz" class="nav-link">🧠 Quiz</a>
+        <a href="#challenges" class="nav-link">🏆 Challenges</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Dark Mode Toggle -->
+        <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle Dark Mode" title="Toggle Theme">
+          <span id="theme-icon">🌙</span>
+        </button>
+
+        <!-- User Profile Dropdown -->
+        <div class="user-profile">
+          <button class="profile-btn" id="profile-btn">
+            <div class="avatar-circle" id="user-avatar">G</div>
+            <span id="user-display-name">Guest</span>
+            <span>▼</span>
+          </button>
+
+          <div class="profile-dropdown" id="profile-dropdown">
+            <div class="dropdown-header">
+              <div class="dropdown-user-name" id="dropdown-name">Welcome, Student! 👋</div>
+              <div class="dropdown-user-role">Community Engagement Project</div>
+            </div>
+            <a href="#meal-planner" class="dropdown-item">🍱 My Meal Plan</a>
+            <a href="#challenges" class="dropdown-item">🏆 My Challenges</a>
+            <a href="#healthy-day-score" class="dropdown-item">📊 My Healthy Day Score</a>
+            <button class="dropdown-item logout" id="logout-btn" style="width:100%; border:none; background:none; text-align:left; cursor:pointer;">
+              🚪 Logout
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ==========================================
+       3. HOME SECTION
+       ========================================== -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span>🎓 Engineering CEP Educational Initiative</span>
+        </div>
+        <h1 class="hero-title">Healthy Food <span>Habits</span></h1>
+        <p class="hero-tagline">Eat Smart • Stay Hydrated • Live Better.</p>
+        <p class="hero-desc">
+          Small changes in our daily food choices can help us build healthier habits, boost academic focus, and support an active, vibrant lifestyle.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#habits" class="btn btn-primary">🌱 Explore Healthy Habits</a>
+          <a href="#meal-planner" class="btn btn-accent">🍱 Plan My Meals</a>
+          <a href="#water-reminder" class="btn btn-secondary">💧 Track Water</a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <img src="images/hero-meal.jpg" alt="Healthy Indian Thali Meal">
+        <div class="hero-badge-float">
+          <div class="hero-badge-icon">🥗</div>
+          <div class="hero-badge-text">
+            <h4>100% Balanced Diet</h4>
+            <p>Traditional Indian Nutrition</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE CARDS -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="features-grid">
+        <a href="#water-reminder" class="feature-card">
+          <div class="feature-icon">💧</div>
+          <h3>Water Reminder</h3>
+          <p>Track your daily 8-glass goal with live visual completion bars.</p>
+        </a>
+
+        <a href="#meal-planner" class="feature-card">
+          <div class="feature-icon">🍱</div>
+          <h3>Weekly Meal Planner</h3>
+          <p>Interactive 7-day dropdown planner with automated Indian nutrition recipes.</p>
+        </a>
+
+        <a href="#recipes" class="feature-card">
+          <div class="feature-icon">🇮🇳</div>
+          <h3>Healthy Indian Recipes</h3>
+          <p>20+ nutritious recipes with full ingredients, steps, and nutrition info.</p>
+        </a>
+
+        <a href="#quiz" class="feature-card">
+          <div class="feature-icon">🧠</div>
+          <h3>Nutrition Quiz</h3>
+          <p>Test your food intelligence with 15 interactive questions.</p>
+        </a>
+
+        <a href="#challenges" class="feature-card">
+          <div class="feature-icon">🏆</div>
+          <h3>Healthy Challenges</h3>
+          <p>Join 7-day habit building challenges and boost your healthy day score.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY HEALTHY FOOD HABITS MATTER -->
+  <section class="section">
+    <div class="container">
+      <div class="why-matters">
+        <div class="container">
+          <div class="section-header">
+            <span class="badge">Essential Knowledge</span>
+            <h2 class="section-title">Why Healthy Food Habits Matter</h2>
+            <p class="section-subtitle">Understanding the core benefits of fueling your body with balanced Indian nutrition.</p>
+          </div>
+
+          <div class="benefits-grid">
+            <div class="benefit-card">
+              <div class="benefit-icon-box">⚡</div>
+              <div class="benefit-content">
+                <h3>Better Energy</h3>
+                <p>Complex carbs and wholesome grains provide steady, sustained stamina throughout long study sessions.</p>
+              </div>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-icon-box">🎯</div>
+              <div class="benefit-content">
+                <h3>Better Concentration</h3>
+                <p>Nourishing foods rich in micronutrients enhance memory retention, focus, and mental clarity.</p>
+              </div>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-icon-box">🥗</div>
+              <div class="benefit-content">
+                <h3>Balanced Nutrition</h3>
+                <p>Ensures your body receives optimal ratios of proteins, vitamins, minerals, and dietary fibers.</p>
+              </div>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-icon-box">💧</div>
+              <div class="benefit-content">
+                <h3>Optimal Hydration</h3>
+                <p>Adequate fluid intake prevents fatigue, improves kidney function, and keeps skin healthy.</p>
+              </div>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-icon-box">🌿</div>
+              <div class="benefit-content">
+                <h3>Healthy Digestion</h3>
+                <p>High-fiber lentils, pulses, and greens support gut health and smooth digestive function.</p>
+              </div>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-icon-box">🌟</div>
+              <div class="benefit-content">
+                <h3>Better Lifestyle Habits</h3>
+                <p>Establishes long-term wellness routines that prevent chronic illness and boost daily vitality.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       4. HEALTHY HABITS SECTION
+       ========================================== -->
+  <section class="section" id="habits">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Nutrition Science</span>
+        <h2 class="section-title">Foundations of Healthy Eating</h2>
+        <p class="section-subtitle">Learn about the essential building blocks of a balanced, wholesome daily diet.</p>
+      </div>
+
+      <div class="habits-grid">
+        <div class="habit-topic-card">
+          <div class="habit-topic-header">
+            <div class="habit-topic-icon">🍛</div>
+            <h3>Balanced Diet</h3>
+          </div>
+          <p>A balanced diet includes all essential macronutrients and micronutrients in proper proportions—ensuring your body receives carbohydrates, proteins, healthy fats, vitamins, and minerals without excess calories.</p>
+        </div>
+
+        <div class="habit-topic-card">
+          <div class="habit-topic-header">
+            <div class="habit-topic-icon">💪</div>
+            <h3>Protein</h3>
+          </div>
+          <p>Crucial for muscle repair, cell growth, and immune strength. Plant-based Indian sources include dal, rajma, chole, paneer, sprouts, moong dal chilla, and nuts.</p>
+        </div>
+
+        <div class="habit-topic-card">
+          <div class="habit-topic-header">
+            <div class="habit-topic-icon">🌾</div>
+            <h3>Complex Carbohydrates</h3>
+          </div>
+          <p>Carbs are your primary energy source. Choose complex carbs like brown rice, oats, millet, ragi, and whole wheat rotis over refined white flour to maintain steady glucose levels.</p>
+        </div>
+
+        <div class="habit-topic-card">
+          <div class="habit-topic-header">
+            <div class="habit-topic-icon">🥑</div>
+            <h3>Healthy Fats</h3>
+          </div>
+          <p>Essential for brain health, hormone synthesis, and vitamin absorption. Incorporate modest amounts of pure ghee, nuts, seeds, mustard oil, and groundnuts.</p>
+        </div>
+
+        <div class="habit-topic-card">
+          <div class="habit-topic-header">
+            <div class="habit-topic-icon">🍊</div>
+            <h3>Vitamins & Minerals</h3>
+          </div>
+          <p>Micronutrients safeguard against illness and support metabolic functions. Citrus fruits, leafy green spinach, carrots, tomatoes, and amla are powerhouses of immunity.</p>
+        </div>
+
+        <div class="habit-topic-card">
+          <div class="habit-topic-header">
+            <div class="habit-topic-icon">🥦</div>
+            <h3>Dietary Fiber</h3>
+          </div>
+          <p>Fiber promotes digestive regularity, regulates blood sugar, and keeps you feeling full longer. Whole grains, legumes, raw vegetables, and fruits are packed with fiber.</p>
+        </div>
+
+        <div class="habit-topic-card">
+          <div class="habit-topic-header">
+            <div class="habit-topic-icon">💧</div>
+            <h3>Hydration</h3>
+          </div>
+          <p>Water transports nutrients, lubricates joints, and regulates body temperature. Drink at least 2 to 2.5 liters of water daily, complemented by buttermilk and coconut water.</p>
+        </div>
+
+        <div class="habit-topic-card">
+          <div class="habit-topic-header">
+            <div class="habit-topic-icon">🍎</div>
+            <h3>Fruits & Vegetables</h3>
+          </div>
+          <p>Aim for 5 colorful servings daily. Eating seasonal produce supplies antioxidants that fight oxidative stress and keep your energy levels soaring.</p>
+        </div>
+
+        <div class="habit-topic-card">
+          <div class="habit-topic-header">
+            <div class="habit-topic-icon">⏰</div>
+            <h3>Regular Meal Timing</h3>
+          </div>
+          <p>Skipping meals leads to fatigue and overeating later. Eating breakfast, lunch, snack, and dinner at consistent times supports a healthy metabolic rhythm.</p>
+        </div>
+      </div>
+
+      <!-- Food Comparison Cards -->
+      <div class="comparison-section">
+        <div class="section-header" style="margin-bottom: 2rem;">
+          <span class="badge">Smart Choices</span>
+          <h2 class="section-title">Nourishing vs Less-Nourishing Foods</h2>
+          <p class="section-subtitle">Simple swaps you can make every day for lasting energy and wellness.</p>
+        </div>
+
+        <div class="comparison-grid">
+          <div class="comp-card healthy">
+            <div class="comp-header">
+              <span>✅ Nourishing Choices</span>
+            </div>
+            <div class="comp-list">
+              <div class="comp-item">
+                <span class="comp-item-icon">🌱</span>
+                <span><strong>Whole Grains:</strong> Poha, Upma, Brown Rice, Ragi Dosa, Multigrain Roti</span>
+              </div>
+              <div class="comp-item">
+                <span class="comp-item-icon">🥗</span>
+                <span><strong>Smart Snacks:</strong> Roasted Makhana, Sprouts Chaat, Roasted Chickpeas, Fresh Fruit</span>
+              </div>
+              <div class="comp-item">
+                <span class="comp-item-icon">🍵</span>
+                <span><strong>Healthy Drinks:</strong> Tender Coconut Water, Fresh Masala Buttermilk, Water</span>
+              </div>
+              <div class="comp-item">
+                <span class="comp-item-icon">🍲</span>
+                <span><strong>Home-cooked Proteins:</strong> Dal Tadka, Rajma Curry, Paneer Bhurji, Moong Dal Khichdi</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="comp-card unhealthy">
+            <div class="comp-header">
+              <span>⚠️ Less-Nourishing Choices</span>
+            </div>
+            <div class="comp-list">
+              <div class="comp-item">
+                <span class="comp-item-icon">🍞</span>
+                <span><strong>Refined Carbs:</strong> White Bread, Maida Pastries, Highly Processed Biscuits</span>
+              </div>
+              <div class="comp-item">
+                <span class="comp-item-icon">🍟</span>
+                <span><strong>Ultra-Processed Snacks:</strong> Deep-fried Packaged Chips, Instant Noodles with excess sodium</span>
+              </div>
+              <div class="comp-item">
+                <span class="comp-item-icon">🥤</span>
+                <span><strong>Sugary Beverages:</strong> Carbonated Soft Drinks, Concentrated Packaged Juices</span>
+              </div>
+              <div class="comp-item">
+                <span class="comp-item-icon">🍔</span>
+                <span><strong>Heavy Fried Foods:</strong> Frequent Fast-food Meals rich in trans fats and artificial preservatives</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       5. WATER REMINDER 💧
+       ========================================== -->
+  <section class="section" id="water-reminder">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Hydration Tracker</span>
+        <h2 class="section-title">Daily Water Reminder 💧</h2>
+        <p class="section-subtitle">Stay refreshed and energize your mind throughout the day.</p>
+      </div>
+
+      <div class="water-container">
+        <div class="water-controls">
+          <div class="target-select-group">
+            <label for="water-target-select">Daily Goal:</label>
+            <select id="water-target-select" class="select-custom">
+              <option value="6">6 Glasses (1.5 Liters)</option>
+              <option value="8" selected>8 Glasses (2.0 Liters - Default)</option>
+              <option value="10">10 Glasses (2.5 Liters)</option>
+              <option value="12">12 Glasses (3.0 Liters)</option>
+            </select>
+          </div>
+
+          <button class="btn btn-outline btn-sm" id="reset-water-btn">
+            <span>🔄 Reset Progress</span>
+          </button>
+        </div>
+
+        <div class="water-progress-box">
+          <div class="water-stats-row">
+            <span id="water-count-text">0 / 8 glasses completed</span>
+            <span id="water-percent-text">0%</span>
+          </div>
+
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="water-progress-fill"></div>
+          </div>
+        </div>
+
+        <!-- Dynamic Glasses Grid -->
+        <div class="water-glasses-grid" id="water-glasses-container">
+          <!-- Rendered via JS -->
+        </div>
+
+        <div class="water-message-box" id="water-motivation-msg">
+          Click on a glass whenever you drink water to log your progress! 💧
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       6, 7, 8, 9. WEEKLY MEAL PLANNER 🍱
+       ========================================== -->
+  <section class="section" id="meal-planner">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Custom Nutrition</span>
+        <h2 class="section-title">7-Day Weekly Meal Planner 🍱</h2>
+        <p class="section-subtitle">Customize your weekly healthy Indian meal schedule with dynamic recipe previews.</p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="planner-actions">
+        <button class="btn btn-primary" id="save-meal-plan-btn">
+          <span>💾 Save My Meal Plan</span>
+        </button>
+        <button class="btn btn-secondary" id="reset-meal-plan-btn">
+          <span>🔄 Reset Recommended Plan</span>
+        </button>
+        <button class="btn btn-accent" id="print-meal-plan-btn">
+          <span>🖨 Print Meal Plan</span>
+        </button>
+      </div>
+
+      <!-- Days Grid Matrix -->
+      <div class="days-grid" id="days-matrix-container">
+        <!-- Rendered by JS dynamically for Monday through Sunday -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       10. RECIPE DETAILS MODAL
+       ========================================== -->
+  <div class="recipe-modal-overlay" id="recipe-modal-overlay">
+    <div class="recipe-modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Modal">✕</button>
+      <div class="modal-body-grid">
+        <div class="modal-img-wrapper">
+          <img src="" id="modal-recipe-img" alt="Recipe Image">
+        </div>
+        <div class="modal-content-wrapper">
+          <span class="modal-category-badge" id="modal-category">Breakfast</span>
+          <h2 class="modal-title" id="modal-title">Vegetable Poha</h2>
+          
+          <div class="modal-prep-info">
+            <span>⏱ Prep: <strong id="modal-prep-time">20 min</strong></span>
+            <span>🔥 Cal: <strong id="modal-calories">220 kcal</strong></span>
+          </div>
+
+          <h3 class="modal-section-title">Ingredients</h3>
+          <ul class="ingredients-list" id="modal-ingredients-list">
+            <!-- Rendered by JS -->
+          </ul>
+
+          <h3 class="modal-section-title">Preparation Steps</h3>
+          <ol class="steps-list" id="modal-steps-list">
+            <!-- Rendered by JS -->
+          </ol>
+
+          <h3 class="modal-section-title">Nutrition Information</h3>
+          <table class="nutrition-table">
+            <thead>
+              <tr>
+                <th>Protein</th>
+                <th>Carbs</th>
+                <th>Fats</th>
+                <th>Fiber</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="nutr-protein">6g</td>
+                <td id="nutr-carbs">42g</td>
+                <td id="nutr-fat">4g</td>
+                <td id="nutr-fiber">5g</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==========================================
+       11, 12. HEALTHY INDIAN RECIPES 🇮🇳
+       ========================================== -->
+  <section class="section" id="recipes">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Culinary Guide</span>
+        <h2 class="section-title">Healthy Indian Recipes 🇮🇳</h2>
+        <p class="section-subtitle">Explore 20+ delicious, balanced recipes complete with preparation steps and nutrition details.</p>
+      </div>
+
+      <!-- Search & Category Filters -->
+      <div class="recipes-controls">
+        <div class="search-box-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="recipe-search-input" class="search-input" placeholder="Search recipes by name or ingredient...">
+        </div>
+
+        <div class="category-pills" id="category-pills">
+          <button class="pill-btn active" data-category="All">All Recipes</button>
+          <button class="pill-btn" data-category="Breakfast">Breakfast 🍳</button>
+          <button class="pill-btn" data-category="Lunch">Lunch 🍲</button>
+          <button class="pill-btn" data-category="Dinner">Dinner 🍛</button>
+          <button class="pill-btn" data-category="Snacks">Snacks 🥗</button>
+          <button class="pill-btn" data-category="Favorites">Favorites ❤️</button>
+        </div>
+      </div>
+
+      <!-- Recipes Grid -->
+      <div class="recipes-grid" id="recipes-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       13. NUTRITION QUIZ 🧠
+       ========================================== -->
+  <section class="section" id="quiz">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">100-Question Bank • Weekly Rotation</span>
+        <h2 class="section-title">Nutrition Quiz 🧠</h2>
+        <p class="section-subtitle">Test your food intelligence with 100 comprehensive questions. Questions repeat automatically every 7 days!</p>
+      </div>
+
+      <div class="quiz-card">
+        <!-- Weekly Cycle Status Banner -->
+        <div id="quiz-weekly-banner" style="background: var(--primary-subtle); color: var(--primary-dark); font-weight: 700; font-size: 0.9rem; padding: 0.75rem 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; text-align: center; border: 1px solid var(--primary-light);">
+          🗓️ Weekly Cycle Active • 100 Questions Bank • Resets in 7 Days
+        </div>
+
+        <!-- Quiz Playing View -->
+        <div id="quiz-playing-view">
+          <div class="quiz-header-bar">
+            <span id="quiz-q-num">Question 1 of 100</span>
+            <span id="quiz-score-live">Score: 0</span>
+          </div>
+
+          <div class="quiz-progress-track">
+            <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+          </div>
+
+          <h3 class="quiz-question-title" id="quiz-question-text">
+            What is the primary benefit of including complex carbohydrates like oats and brown rice in your diet?
+          </h3>
+
+          <div class="quiz-options-grid" id="quiz-options-container">
+            <!-- Options rendered by JS -->
+          </div>
+
+          <div class="quiz-explanation-box" id="quiz-explanation">
+            <!-- Explanation rendered by JS -->
+          </div>
+
+          <div class="quiz-actions">
+            <button class="btn btn-primary" id="quiz-next-btn" style="display:none;">
+              <span>Next Question ➔</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quiz Final Score Screen -->
+        <div class="quiz-score-screen" id="quiz-score-screen">
+          <div class="score-badge-circle">
+            <span class="score-num" id="final-score-num">14</span>
+            <span class="score-total" id="final-score-total">out of 15</span>
+          </div>
+
+          <h2 class="quiz-result-title" id="final-rating-title">Excellent! 🌟</h2>
+          <p class="quiz-result-msg" id="final-rating-desc">You are a nutrition master with great knowledge about balanced eating!</p>
+
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <button class="btn btn-primary" id="quiz-continue-btn">
+              <span>⏩ Next 15 Questions</span>
+            </button>
+            <button class="btn btn-secondary" id="quiz-retry-btn">
+              <span>🔄 Restart Set</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       14. HEALTHY CHALLENGES 🏆
+       ========================================== -->
+  <section class="section" id="challenges">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Habit Building</span>
+        <h2 class="section-title">Healthy Challenges 🏆</h2>
+        <p class="section-subtitle">Take on 7-day health challenges to transform your energy and daily routines.</p>
+      </div>
+
+      <div class="challenges-grid" id="challenges-grid-container">
+        <!-- Rendered by JS dynamically -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       15. HEALTHY DAY SCORE 📊 ("MY HEALTHY DAY")
+       ========================================== -->
+  <section class="section" id="healthy-day-score">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Daily Tracker</span>
+        <h2 class="section-title">My Healthy Day 📊</h2>
+        <p class="section-subtitle">Check off your daily accomplishments and see your live Healthy Day Score!</p>
+      </div>
+
+      <div class="day-score-wrapper">
+        <div class="checklist-column">
+          <h3 class="checklist-title">Daily Healthy Checklist</h3>
+          <div class="daily-checklist" id="daily-checklist-container">
+            <label class="checklist-item">
+              <input type="checkbox" data-index="0">
+              <span>Completed water goal 💧</span>
+            </label>
+
+            <label class="checklist-item">
+              <input type="checkbox" data-index="1">
+              <span>Ate a healthy breakfast 🍳</span>
+            </label>
+
+            <label class="checklist-item">
+              <input type="checkbox" data-index="2">
+              <span>Ate fruits / vegetables 🍎</span>
+            </label>
+
+            <label class="checklist-item">
+              <input type="checkbox" data-index="3">
+              <span>Chose a healthy snack 🥗</span>
+            </label>
+
+            <label class="checklist-item">
+              <input type="checkbox" data-index="4">
+              <span>Chose water instead of sugary drinks 🥤</span>
+            </label>
+
+            <label class="checklist-item">
+              <input type="checkbox" data-index="5">
+              <span>Completed today's challenge 🏆</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="score-display-column">
+          <div class="ring-container">
+            <svg class="ring-svg" viewBox="0 0 180 180">
+              <defs>
+                <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#2E7D32" />
+                  <stop offset="100%" stop-color="#4CAF50" />
+                </linearGradient>
+              </defs>
+              <circle class="ring-bg" cx="90" cy="90" r="80"></circle>
+              <circle class="ring-progress" id="score-ring-progress" cx="90" cy="90" r="80"></circle>
+            </svg>
+            <div class="ring-text">
+              <span class="ring-score-percent" id="score-percent-text">0%</span>
+              <span class="ring-score-label">Healthy Score</span>
+            </div>
+          </div>
+
+          <div class="score-status-badge" id="score-status-msg">
+            Start logging your day! 🌱
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       18. FOOTER (NO CONTACT LINK!)
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Healthy Food Habits 🌱</h3>
+          <p>“Small healthy choices today can create healthier habits tomorrow.”</p>
+          <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-light);">
+            Engineering Community Engagement Project (CEP) • Educating students for better health.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <div class="footer-nav">
+            <a href="#home">🏠 Home</a>
+            <a href="#habits">🌱 Healthy Habits</a>
+            <a href="#water-reminder">💧 Water Reminder</a>
+            <a href="#meal-planner">🍱 Meal Planner</a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <div class="footer-nav">
+            <a href="#recipes">🇮🇳 Indian Recipes</a>
+            <a href="#quiz">🧠 Nutrition Quiz</a>
+            <a href="#challenges">🏆 Healthy Challenges</a>
+            <a href="#healthy-day-score">📊 Healthy Day Score</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Healthy Food Habits - Engineering CEP Educational Project. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
