@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Breakfast',
       prepTime: '15 min',
       calories: '200 kcal',
-      image: 'images/upma.jpg',
+      image: 'upma.jpg',
       shortDesc: 'Roasted semolina cooked with colorful diced veggies, ginger, and mustard seeds.',
       ingredients: [
         '1 cup Semolina (Rava)',
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Breakfast',
       prepTime: '25 min',
       calories: '180 kcal',
-      image: 'images/moong-dal-chilla.jpg',
+      image: 'moong-dal-chilla.jpg',
       shortDesc: 'Savory protein-packed green gram crepes stuffed with grated paneer and herbs.',
       ingredients: [
         '1 cup Split Yellow Moong Dal (soaked)',
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Breakfast',
       prepTime: '20 min',
       calories: '170 kcal',
-      image: 'images/ragi-dosa.jpg',
+      image: 'ragi-dosa.jpg',
       shortDesc: 'Calcium and iron rich finger millet crepes served with coconut chutney.',
       ingredients: [
         '1 cup Ragi (Finger Millet) Flour',
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Breakfast',
       prepTime: '20 min',
       calories: '160 kcal',
-      image: 'images/oats-idli.jpg',
+      image: 'oats-idli.jpg',
       shortDesc: 'Steamed fluffy oatcakes enriched with grated carrots and mustard seasoning.',
       ingredients: [
         '1 cup Rolled Oats (ground)',
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Breakfast',
       prepTime: '15 min',
       calories: '210 kcal',
-      image: 'images/uttapam.jpg',
+      image: 'uttapam.jpg',
       shortDesc: 'Thick fermented rice pancake topped with fresh tomatoes, onions, and capsicum.',
       ingredients: [
         '2 cups Dosa batter',
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Breakfast',
       prepTime: '25 min',
       calories: '230 kcal',
-      image: 'images/idli-sambar.jpg',
+      image: 'idli-sambar.jpg',
       shortDesc: 'Traditional steamed rice cakes served with fiber-rich vegetable lentil stew.',
       ingredients: [
         '4 Steamed Idlis',
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Breakfast',
       prepTime: '15 min',
       calories: '190 kcal',
-      image: 'images/besan-chilla.jpg',
+      image: 'besan-chilla.jpg',
       shortDesc: 'Quick spiced gram flour pancake packed with ajwain, onions, and herbs.',
       ingredients: [
         '1 cup Besan (Gram flour)',
@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Breakfast',
       prepTime: '20 min',
       calories: '180 kcal',
-      image: 'images/veg-dalia.jpg',
+      image: 'veg-dalia.jpg',
       shortDesc: 'Wholesome broken wheat porridge pressure-cooked with seasonal vegetables.',
       ingredients: [
         '1 cup Broken Wheat (Dalia)',
@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Lunch',
       prepTime: '30 min',
       calories: '340 kcal',
-      image: 'images/dal-rice.jpg',
+      image: 'dal-rice.jpg',
       shortDesc: 'Classic comfort thali meal of yellow lentils with aromatic cumin steamed rice.',
       ingredients: [
         '1 cup Yellow Arhar Dal',
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Lunch',
       prepTime: '40 min',
       calories: '380 kcal',
-      image: 'images/rajma-rice.jpg',
+      image: 'rajma-rice.jpg',
       shortDesc: 'Protein-loaded red kidney bean curry slow-simmered in tomato onion gravy with rice.',
       ingredients: [
         '1 cup Red Rajma (soaked overnight)',
@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Lunch',
       prepTime: '30 min',
       calories: '360 kcal',
-      image: 'images/palak-paneer.jpg',
+      image: 'palak-paneer.jpg',
       shortDesc: 'Fresh spinach puree infused with cottage cheese cubes served with multigrain roti.',
       ingredients: [
         '2 bunches Fresh Spinach (blanched)',
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Lunch',
       prepTime: '25 min',
       calories: '310 kcal',
-      image: 'images/veg-pulao.jpg',
+      image: 'veg-pulao.jpg',
       shortDesc: 'Fragrant basmati rice cooked with whole spices, carrots, beans, and green peas.',
       ingredients: [
         '1 cup Basmati Rice',
@@ -306,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Lunch',
       prepTime: '25 min',
       calories: '330 kcal',
-      image: 'images/dal-tadka.jpg',
+      image: 'dal-tadka.jpg',
       shortDesc: 'Creamy cooked lentils finished with a smoking garlic cumin tempering.',
       ingredients: [
         '1 cup Toor & Moong Dal mix',
@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Lunch',
       prepTime: '25 min',
       calories: '290 kcal',
-      image: 'images/millet-khichdi.jpg',
+      image: 'millet-khichdi.jpg',
       shortDesc: 'Foxtail millet and moong dal simmered with vegetables and digestive spices.',
       ingredients: [
         '1/2 cup Foxtail Millet',
@@ -348,7 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Lunch',
       prepTime: '35 min',
       calories: '370 kcal',
-      image: 'images/chole-roti.jpg',
+      image: 'chole-roti.jpg',
       shortDesc: 'Spiced chickpeas curry cooked in tea-infused onion tomato gravy with roti.',
       ingredients: [
         '1 cup White Chickpeas (Kabuli Chana soaked)',
@@ -369,7 +369,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Snacks',
       prepTime: '10 min',
       calories: '120 kcal',
-      image: 'images/fruit-chaat.jpg',
+      image: 'fruit-chaat.jpg',
       shortDesc: 'Assorted seasonal fruits tossed with chaat masala, mint, and lemon juice.',
       ingredients: [
         '1 Apple & 1 Banana (cubed)',
@@ -390,7 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Snacks',
       prepTime: '10 min',
       calories: '140 kcal',
-      image: 'images/roasted-makhana.jpg',
+      image: 'roasted-makhana.jpg',
       shortDesc: 'Crispy lotus seeds lightly roasted in 1/2 tsp ghee with black salt and pepper.',
       ingredients: [
         '2 cups Lotus Seeds (Makhana)',
@@ -410,7 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Snacks',
       prepTime: '10 min',
       calories: '150 kcal',
-      image: 'images/sprouts-chaat.jpg',
+      image: 'sprouts-chaat.jpg',
       shortDesc: 'Steamed sprouted mung beans tossed with onions, cucumber, and pomegranate.',
       ingredients: [
         '1.5 cups Sprouted Moong',
@@ -429,7 +429,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Snacks',
       prepTime: '20 min',
       calories: '160 kcal',
-      image: 'images/roasted-chickpeas.jpg',
+      image: 'roasted-chickpeas.jpg',
       shortDesc: 'Crunchy oven or pan-roasted chickpeas spiced with red chilli and cumin.',
       ingredients: [
         '1 cup Boiled Chickpeas (dried)',
@@ -449,7 +449,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Dinner',
       prepTime: '25 min',
       calories: '280 kcal',
-      image: 'images/dal-khichdi.jpg',
+      image: 'dal-khichdi.jpg',
       shortDesc: 'Gentle, gut-friendly moong dal and rice porridge tempered with ghee and cumin.',
       ingredients: [
         '1/2 cup Rice & 1/2 cup Yellow Moong Dal',
@@ -469,7 +469,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Dinner',
       prepTime: '20 min',
       calories: '210 kcal',
-      image: 'images/veg-dalia.jpg',
+      image: 'veg-dalia.jpg',
       shortDesc: 'Light savory broken wheat soup stewed with green vegetables for easy night digestion.',
       ingredients: [
         '1 cup Broken Wheat',
@@ -487,7 +487,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Dinner',
       prepTime: '20 min',
       calories: '340 kcal',
-      image: 'images/paneer-bhurji.jpg',
+      image: 'paneer-bhurji.jpg',
       shortDesc: 'Scrambled paneer sautéed with onions, capsicum, tomatoes, and Indian spices.',
       ingredients: [
         '150g Crumbled Paneer',
@@ -506,7 +506,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Dinner',
       prepTime: '20 min',
       calories: '220 kcal',
-      image: 'images/veg-soup.jpg',
+      image: 'veg-soup.jpg',
       shortDesc: 'Warm clear vegetable soup loaded with broccoli, carrots, and sweetcorn with 1 roti.',
       ingredients: [
         'Assorted Vegetables (Carrot, Corn, Broccoli, Beans)',
@@ -525,7 +525,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Dinner',
       prepTime: '25 min',
       calories: '310 kcal',
-      image: 'images/multigrain-roti.jpg',
+      image: 'multigrain-roti.jpg',
       shortDesc: 'High-fiber multigrain flatbreads served with mixed vegetable dry sabzi.',
       ingredients: [
         '2 Multigrain Rotis (Wheat, Oats, Ragi, Chana mix)',
